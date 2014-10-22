@@ -1,0 +1,31 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>PixelTest</title>
+</head>
+<body>
+    <br />
+    <br />
+  
+        <div align="center">
+
+            <b>  <h3>This page will send an installation conversion in order to initiate a  S2S pixel response to partner</b></h3>
+
+            <h4>Please replace the [REPLACE_WITH_UID] with the UID you got in the landing page and click go!</h4><br />
+            &nbsp;
+            <br />
+            <select name="strDomain" id="strDomain" onchange="updateDiv();">
+                <option value="http://www.myloopme.com/api/s?uid=" selected>http://www.myloopme.com/api/s?uid=</option>
+                <option value="http://localhost:49273/api/s?uid=">http://localhost:49273/api/s?uid=</option>
+
+            </select>
+            <input type="text" id="txt3" name="txt3" value="[REPLACE_WITH_UID]" style="width: 359px" />
+            <input type="button" value="go" onclick="window.open(strDomain.value + txt3.value, '', 'width=600, height=400');" />
+
+        </div>
+    
+</body>
+</html>

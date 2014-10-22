@@ -1,0 +1,13 @@
+﻿25-Jul-2014 - log response error to DB
+04-Aug-2014 - added ability to change response HttpStatusCode through web.config
+
+06-aug-20014 - Air installer - added new landingpagesByGEO table and logic in request handler
+			 - moved all GEO by IP and DB to pixHelpers so will be available to all classes
+			 - changed class name of pixHelpers
+
+12 - Aug	- air installer - redirected all unknown traffic to BR
+28 - Aug	- added logic for landingPagesByGeo - if county does not exist do not send response pixel
+
+13 - Sept	- added monitor page
+15 - Sept	- Added ability to send country code for Matomy	
+
