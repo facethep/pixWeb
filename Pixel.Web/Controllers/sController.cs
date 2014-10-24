@@ -128,7 +128,7 @@ namespace Pixel.Web.Controllers
                                         }
                                 catch (Exception e)
                                         {
-
+                                            db.CloseSharedConnection();
                                             log.Fatal("Could not insert Response to database with url: " + fullUrl, e);
                                             retValue = "ERROR 1";
                                         }
@@ -290,6 +290,7 @@ namespace Pixel.Web.Controllers
 
                 }
                 catch (Exception e)  {
+                    db.CloseSharedConnection();
                     log.Fatal("Error inserting response error to DataBase", e);
                 }                
 
@@ -345,11 +346,12 @@ namespace Pixel.Web.Controllers
                     new PetaPoco.Database("myConnectionString").Execute(s);
                     responseCounterValue = Convert.ToInt32(oVar_responseCounterValue.Value);
                     log.Info("appKey: " + appKey + " = " + responseCounterValue.ToString());
+                    
 
                 }
                 catch (Exception e)
                 {
-
+                   
                     log.Fatal("Erorr executing SP_InstallX for: " + appKey, e);
                      return true;
                 }
