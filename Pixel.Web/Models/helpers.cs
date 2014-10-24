@@ -153,12 +153,12 @@ namespace Pixel.Web.Models
         public static string RunningPlatform()
         {
 
-            string oAgent = HttpContext.Current.Request.UserAgent;
+           
             string retVal = string.Empty;
 
             try
             {
-                
+                string oAgent = HttpContext.Current.Request.UserAgent;
                 //var osInfo = oAgent.Split(new Char[] { '(', ')' ,'/'})[1];
                 if (oAgent.ToLower().Contains("mac_powerpc") || oAgent.ToLower().Contains("macintosh"))
                 {
@@ -176,13 +176,53 @@ namespace Pixel.Web.Models
             }
             catch(Exception e)
             {
-                log.Fatal("Error getting platform from:  " + oAgent, e);
+                log.Error("Error getting platform from : HttpContext.Current.Request.UserAgent   ", e);
                 
             }
 
             return retVal;       
 
         }
+
+
+        /*
+         * 
+         * public static bool IsRequestSearchBot()
+{
+    if (System.Web.HttpContext.Current != null && System.Web.HttpContext.Current.Request != null)
+    {
+        string userAgent = System.Web.HttpContext.Current.Request.UserAgent;
+        if (string.IsNullOrEmpty(userAgent))
+        {
+            return false;
+        }
+ 
+        userAgent = userAgent.ToLower();
+ 
+        string[] userAgents = new string[]
+        {
+            "googlebot",
+            "bingbot",
+            "msnbot",
+            "yahoo! slurp",
+            "baiduspider",
+            "iaskspider",
+            "ask jeeves"
+        };              
+ 
+        foreach (string agent in userAgents)
+        {
+            if (userAgent.Contains(agent))
+            {
+                return true;
+            }
+        }
+    }
+ 
+    return false;
+}
+         * 
+         */
 
 
         public static string GetLocationFromIPDB(string IP)

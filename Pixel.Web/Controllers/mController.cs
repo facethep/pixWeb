@@ -102,31 +102,45 @@ namespace Pixel.Web.Controllers
             string[] pagesList = SettingsCache.MAC_PAGES.Split(',');
 
             pixLandingPages macPage  = SettingsCache.GetPage(1005);
-            string macUrl = macPage.url;
-            string currentPageName = macPage.url.Split('/')[4].Split('?')[0]+'f';
-            string newPageName;
-            newPageName = currentPageName;
-            string tmpPageName;
-            //getting the new page name 
-            for (int i = 0; i < pagesList.Length-1; i++)
-            {
-                tmpPageName = pagesList[i].ToString();
-                if (tmpPageName.ToLower() == currentPageName)
+            string currentPageName = macPage.url.Split('/')[4].Split('?')[0];
+
+            //id = 6 will be used to get the new page and change in database
+            //any other id will be used to get the curent page
+
+            if (id == 6) { 
+                string macUrl = macPage.url;
+                string newPageName;
+                newPageName = currentPageName;
+                string tmpPageName;
+                //getting the new page name 
+                for (int i = 0; i < pagesList.Length-1; i++)
                 {
-                    newPageName = pagesList[i + 1].ToString();
+                    tmpPageName = pagesList[i].ToString();
+                    if (tmpPageName.ToLower() == currentPageName)
+                    {
+                        newPageName = pagesList[i + 1].ToString();
+                    }
                 }
+
+                if (!newPageName.Equals(currentPageName))
+                {
+
+                    macPage.url = macPage.url.Replace(currentPageName, newPageName);
+                    var db = new PetaPoco.Database("myConnectionString");
+                    db.Update(macPage);
+                 }
+
+                return macPage.url;
+
+
             }
 
-            if (!newPageName.Equals(currentPageName))
+            else
             {
-
-                macPage.url = macPage.url.Replace(currentPageName, newPageName);
-                var db = new PetaPoco.Database("myConnectionString");
-                db.Update(macPage);
-             }
+                return currentPageName;
+            }
 
             
-            return macPage.url;
 
         }
 

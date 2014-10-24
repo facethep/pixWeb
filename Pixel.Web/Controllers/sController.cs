@@ -318,14 +318,15 @@ namespace Pixel.Web.Controllers
 
             if (i > -1)
             {
-                appKey =  "provider_" + tmpRequest.providerid.ToString() + "_page_" + _pageid.ToString() + "_" + _countryCode + "_RC";
+              //  appKey =  "provider_" + tmpRequest.providerid.ToString() + "_page_" + _pageid.ToString() + "_" + _countryCode + "_RC";
                 SendResponseEvery = i;
 
             }
-            else{
-                appKey = "provider_" + tmpRequest.providerid.ToString() + "_RC";
-                }
+         //   else{
+         //       appKey = "provider_" + tmpRequest.providerid.ToString() + "_RC";
+         //       }
 
+            appKey = "provider_" + tmpRequest.providerid.ToString() + "_page_" + _pageid.ToString() + "_" + _countryCode + "_RC";
             responseCounterValue = 0;
 
           
@@ -355,37 +356,11 @@ namespace Pixel.Web.Controllers
 
                 
                 retVal  =  !((responseCounterValue % SendResponseEvery) != 0);
+
+                log.Error("SENDING PIXEL STATUS: " + appKey + ", responseCounterValuec=" + responseCounterValue.ToString() + ", SendResponseEvery = " + SendResponseEvery.ToString() + ", STATUS= " + retVal.ToString()) ;
+
                 log.Info("Need to send pixel to provider: " + appKey + " = " + retVal.ToString());
                 return retVal;
-
-                //initializing the application counter for each provider if does not exist
-                /*if (System.Web.HttpContext.Current.Application.Get(appKey) == null)
-                {
-                    System.Web.HttpContext.Current.Application[appKey] = 1; 
-                }
-                responseCounterValue = Convert.ToInt16(System.Web.HttpContext.Current.Application.Get(appKey));
-                
-                 */
-
-               
-                
-                /*if ((responseCounterValue % SendResponseEvery) != 0)
-                    {
-                        //System.Web.HttpContext.Current.Application.Lock();
-                        //System.Web.HttpContext.Current.Application[appKey] = (responseCounterValue + 1).ToString();
-                       // System.Web.HttpContext.Current.Application.UnLock();
-                        return false;
-                    }
-                    else
-                    {
-                        
-                            //System.Web.HttpContext.Current.Application.Lock();
-                           // System.Web.HttpContext.Current.Application[appKey] = "1";
-                           // System.Web.HttpContext.Current.Application.UnLock();
-                        
-                        return true;
-                    }*/
-
             }
             return true;
            
