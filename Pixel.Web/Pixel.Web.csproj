@@ -85,7 +85,7 @@
     <Content Include="index.html" />
     <Content Include="index1.html" />
     <Content Include="landingpage.html" />
-    <Content Include="LP\index.aspx" />
+    <Content Include="iplocation\LP\index.aspx" />
     <Content Include="pixelTest.html" />
     <Content Include="Revisions.txt" />
     <Content Include="sys\cacheObjets.aspx" />
