@@ -8,6 +8,7 @@ using Pixel.Web.DB;
 using Pixel.Web.Models;
 using System.Data.SqlClient;
 using System.Data;
+using System.Threading;
 
 /*
  The Pixel from the DLM will send data to here 
@@ -96,6 +97,7 @@ namespace Pixel.Web.Controllers
                                     //send response to provider
                                     WebClient proxy = new WebClient();
                                     log.Info("Sending pixel response to Provider: " + pixelURL);
+                                    Thread.Sleep(300);
                                     var response = proxy.DownloadString(pixelURL);
                                     proxy.Dispose();
                                     myResponse.sentToProvider = true;
