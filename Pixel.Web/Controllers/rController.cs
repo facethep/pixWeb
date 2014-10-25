@@ -165,7 +165,6 @@ namespace Pixel.Web.Controllers
                     catch (Exception e)
                     {
 
-                        db.CloseSharedConnection();
                         string tmp = " INSERT INTO [dbo].[Requests] ([reqGuid],[full_url],[param1],[user_ip],[redirect_to],[providerid],[pageid],[platform],[countryCode]) VALUES (";
                         tmp +=  " cast ('"+ myRequest.reqGuid +"' as uniqueidentifier),'" +  myRequest.full_url +"','" + myRequest.param1 + "'";
                         tmp +=  ",'" + myRequest.user_ip +"','" + myRequest.redirect_to +"'," +myRequest.providerid.ToString() +"," + myRequest.pageid.ToString();

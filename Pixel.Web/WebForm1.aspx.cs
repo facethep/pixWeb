@@ -113,6 +113,13 @@ namespace Pixel.Web
             else
                 label1.Text = p.name;
         }
+
+        protected void Button3_Click1(object sender, EventArgs e)
+        {
+            int i = SettingsCache.getGeoX(Convert.ToInt16(txtPageID.Text), txtCountryCode.Text, Convert.ToInt16(txtProviderID.Text));
+            lblResponseX.Text = i.ToString();
+
+        }
       
 
       

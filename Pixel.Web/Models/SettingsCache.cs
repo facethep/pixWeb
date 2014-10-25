@@ -280,17 +280,19 @@ namespace Pixel.Web.Models
             pixLandingPages_X_Mask pageByCountryCode;
             pixLandingPages_X_Mask pageByProviderX;
 
-            pageByProviderX = pages_X_Mask.Find(x => x.pageid == pageID && x.countryCode == countryCode && x.providerid == providerid);
-            pageByCountryCode = pages_X_Mask.Find(x => x.pageid == pageID && x.countryCode == countryCode && x.providerid == -1);
+            pageByProviderX     = pages_X_Mask.Find(x => x.pageid == pageID && x.countryCode == countryCode && x.providerid == providerid);
+            pageByCountryCode   = pages_X_Mask.Find(x => x.pageid == pageID && x.countryCode == countryCode && x.providerid == -1);
 
 
             if (pageByProviderX != null)
             {
+                log.Error("getGeoX pageByProviderX is not Null - found a record for provider, page &  countryCode ");
                 return pageByProviderX.sendResponseEvery_x;
             }
 
             if (pageByCountryCode != null)
             {
+                log.Error("getGeoX pageByCountryCode is not Null - found a record for page &  countryCode , providerid = -1 ");
                 return pageByCountryCode.sendResponseEvery_x;
             }
 

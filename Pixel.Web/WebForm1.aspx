@@ -93,29 +93,27 @@
             
             <asp:Button ID="rfrCache" runat="server" OnClick="rfrCache_Click" Text="Refresh Cache" />
             <asp:Label ID="label1" runat="server" Text="Label"></asp:Label>
-&nbsp;<h3><b><div id="fullurl" align="center" > </div></b></h3>
+&nbsp;<h3><b>provider<div id="fullurl" align="center" > </div></b></h3>
             </td>
 
         </tr>    
-            <tr>
-                <td >Request to landing page</td>
-                <td>Good: 
-                    <input type="text" id ="txt1" name="txt1" value="/r/10031005/?affid=34&tranid=134" style="width: 359px"/>
-                <input type="button" value="go" onclick="window.open(strDomain.value + txt1.value, '', 'width=600, height=400');" />
-                </td>
-                <td>Bad
-                     <input type="text" id ="txt2" name="txt2" value="/r/10031008/?affid=34&tranid=134"  style="width: 359px"/>
-                    <input type="button" value="go" onclick="window.open(strDomain.value+txt2.value, '', 'width=600, height=400');" />
-                    </td>
-            </tr>
             <tr>
                 <td class="auto-style1">Response from DLM</td>
                 <td>Good
                      <input type="text" id ="txt3" name="txt3" value="/s?uid=PUT_UID"  style="width: 359px"/>
                     <input type="button" value="go" onclick="window.open(strDomain.value+txt3.value, '', 'width=600, height=400');" /></td>
-                <td>Bad
-                     <input type="text" id ="txt4" name="txt4" value="/s?uid=399b1bea-81b1-4ad9-b55f-a8ff9eebd2a" style="width: 359px"/>
-                    <input type="button" value="go" onclick="window.open(strDomain.value+txt4.value, '', 'width=600, height=400');" /></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1">&nbsp;</td>
+                <td>providerid<asp:TextBox ID="txtProviderID" runat="server" Width="74px"></asp:TextBox>
+&nbsp;pageid<asp:TextBox ID="txtPageID" runat="server" Width="87px"></asp:TextBox>
+&nbsp; countryCode<asp:TextBox ID="txtCountryCode" runat="server" Width="67px"></asp:TextBox>
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click1" Text="get  Response X" />
+&nbsp;
+                    <asp:Label ID="lblResponseX" runat="server" Text="Label"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
             </tr>
         </table>
         <hr>
