@@ -105,6 +105,7 @@
     <Compile Include="Controllers\fpController.cs" />
     <Compile Include="Controllers\gnController.cs" />
     <Compile Include="Controllers\mController.cs" />
+    <Compile Include="Controllers\old.cs" />
     <Compile Include="Controllers\rController.cs" />
     <Compile Include="Controllers\snewController.cs" />
     <Compile Include="iplocation\Country.cs" />

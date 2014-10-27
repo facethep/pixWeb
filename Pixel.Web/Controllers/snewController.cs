@@ -82,7 +82,9 @@ namespace Pixel.Web.Controllers
                         myResponse.sentToProvider = false;
 
                         // check if we need to send response to provider 
-                        if (blnSendPixel() && sendResponseByCountry(intRequestPageId, requestCountryCode))
+                       // if (blnSendPixel() && sendResponseByCountry(intRequestPageId, requestCountryCode))
+
+                        if (blnSendPixel() )
                         {
 
                             //R_FACTOR: get R_Factor for provider/ page-provider etc.
@@ -206,7 +208,7 @@ namespace Pixel.Web.Controllers
 
         // will check if the country the request came from is one that has a landing page
         // if not we should not send response pixel
-        private Boolean sendResponseByCountry(int intPageId, string countryCode)
+      /*  private Boolean sendResponseByCountry(int intPageId, string countryCode)
         {
            
             Boolean retVal = true;
@@ -223,7 +225,7 @@ namespace Pixel.Web.Controllers
 
 
         }
-
+*/
         private string buildS2SURL(pixProviders provider, pixRequests req) {
       
             //split string to replace vro mprovider

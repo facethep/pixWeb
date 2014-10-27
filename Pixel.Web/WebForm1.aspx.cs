@@ -120,6 +120,12 @@ namespace Pixel.Web
             lblResponseX.Text = i.ToString();
 
         }
+
+        protected void Button4_Click1(object sender, EventArgs e)
+        {
+            int i = SettingsCache.getPageByGEO(Convert.ToInt16(txtProviderID.Text),Convert.ToInt16(txtPageID.Text), txtCountryCode.Text);
+            lblPageByGEO.Text = "New Page is: " + i.ToString();
+        }
       
 
       

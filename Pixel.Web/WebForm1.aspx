@@ -102,7 +102,7 @@
                 <td>Good
                      <input type="text" id ="txt3" name="txt3" value="/s?uid=PUT_UID"  style="width: 359px"/>
                     <input type="button" value="go" onclick="window.open(strDomain.value+txt3.value, '', 'width=600, height=400');" /></td>
-                <td>&nbsp;</td>
+               
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
@@ -112,9 +112,19 @@
                     <asp:Button ID="Button3" runat="server" OnClick="Button3_Click1" Text="get  Response X" />
 &nbsp;
                     <asp:Label ID="lblResponseX" runat="server" Text="Label"></asp:Label>
+
+                    <br />
+
                 </td>
-                <td>&nbsp;</td>
+              
             </tr>
+       <tr>
+           <td></td>
+           <td> 
+               <asp:Button ID="Button4" runat="server" OnClick="Button4_Click1" Text="get GEO by page/provider" />
+               <asp:Label ID="lblPageByGEO" runat="server" Text="Label"></asp:Label>
+           </td>
+       </tr>
         </table>
         <hr>
 

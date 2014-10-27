@@ -139,42 +139,42 @@ namespace Pixel.Web.Models
         }
 
 
-        private static List<pixLandingPagesByGEO> loadLandingPagesByGEO()
-        {
-            string cacheName = "landingPagesByGeo";
-            log.Info("Settings - loadLandingPagesByGEO ");
+        /* private static List<pixLandingPagesByGEO> loadLandingPagesByGEO()
+         {
+             string cacheName = "landingPagesByGeo";
+             log.Info("Settings - loadLandingPagesByGEO ");
 
 
-            List<pixLandingPagesByGEO> pagesByGEO;
-            if (!cacheManager.IsIncache(cacheName))
-            {
-                var db = new PetaPoco.Database("myConnectionString");
-                string sQuery = "SELECT * FROM LandingPagesByGEO";
-                try
-                {
-                    var result = db.Fetch<pixLandingPagesByGEO>(sQuery);
-                    db.CloseSharedConnection();
-                    pagesByGEO = result.ToList();
-                    cacheManager.SaveTocache(cacheName, pagesByGEO);
+             List<pixLandingPagesByGEO> pagesByGEO;
+             if (!cacheManager.IsIncache(cacheName))
+             {
+                 var db = new PetaPoco.Database("myConnectionString");
+                 string sQuery = "SELECT * FROM LandingPagesByGEO";
+                 try
+                 {
+                     var result = db.Fetch<pixLandingPagesByGEO>(sQuery);
+                     db.CloseSharedConnection();
+                     pagesByGEO = result.ToList();
+                     cacheManager.SaveTocache(cacheName, pagesByGEO);
 
-                }
+                 }
 
-                catch (Exception e)
-                {
-                    log.Error("!! cannot load Settings of all Landing pages By GEO !!", e);
-                }
-            }
-            return cacheManager.GetFromCache<List<pixLandingPagesByGEO>>(cacheName);
+                 catch (Exception e)
+                 {
+                     log.Error("!! cannot load Settings of all Landing pages By GEO !!", e);
+                 }
+             }
+             return cacheManager.GetFromCache<List<pixLandingPagesByGEO>>(cacheName);
 
-        }
+         }
+      
 
-
-        public static pixLandingPagesByGEO GetPageByGEO(int pageID, string GEO)
-        {
-            List<pixLandingPagesByGEO> pagesByGEO = loadLandingPagesByGEO();
-            return pagesByGEO.Find(x => x.pageid == pageID && x.countryCode == GEO);
-        }
-
+         public static pixLandingPagesByGEO GetPageByGEO(int pageID, string GEO)
+         {
+             List<pixLandingPagesByGEO> pagesByGEO = loadLandingPagesByGEO();
+             return pagesByGEO.Find(x => x.pageid == pageID && x.countryCode == GEO);
+         }
+         
 
         public static Boolean checkLandingPageByGeo(int pageID)
         {
@@ -186,7 +186,7 @@ namespace Pixel.Web.Models
             return false;
 
         }
-
+          */
 
 
         private static List<pixLandingPagesMask> loadLandingPagesMask()
@@ -219,6 +219,7 @@ namespace Pixel.Web.Models
 
         }
 
+
         public static int getRealPageID(int pageID, int providerID)
         {
 
@@ -242,6 +243,69 @@ namespace Pixel.Web.Models
 
             return pageID;
         }
+
+
+        private static List<pixPageRedirectionByGEO> loadLandingPagesMaskByGEO()
+        {
+            string cacheName = "landingPagesMaskByGEO";
+            log.Info("Settings - loadLandingPagesMask-ByGEO ");
+
+
+            List<pixPageRedirectionByGEO> pagesMaskByGEO;
+            if (!cacheManager.IsIncache(cacheName))
+            {
+
+                var db = new PetaPoco.Database("myConnectionString");
+                string sQuery = "SELECT * FROM LandingPagesMaskByGEO";
+                try
+                {
+                    var result = db.Fetch<pixPageRedirectionByGEO>(sQuery);
+                    db.CloseSharedConnection();
+                    pagesMaskByGEO = result.ToList();
+                    cacheManager.SaveTocache(cacheName, pagesMaskByGEO);
+
+                }
+
+                catch (Exception e)
+                {
+                    log.Error("!! cannot load Settings of all Landing pages Mask By GEO !!", e);
+                }
+            }
+            return cacheManager.GetFromCache<List<pixPageRedirectionByGEO>>(cacheName);
+
+        }
+
+
+        public static int  getPageByGEO(int providerid, int pageID, string countryCode)
+        {
+            List<pixPageRedirectionByGEO> pagesByGEO = loadLandingPagesMaskByGEO();
+
+            pixPageRedirectionByGEO pageByGeoGeneral;
+            pixPageRedirectionByGEO pageByGEOByProvider;
+
+            pageByGEOByProvider = pagesByGEO.Find(x => x.pageid_origin == pageID && x.countryCode == countryCode && x.providerid == providerid);
+            pageByGeoGeneral = pagesByGEO.Find(x => x.pageid_origin == pageID && x.countryCode == countryCode && x.providerid == -1);
+
+
+            if (pageByGEOByProvider != null)
+            {
+                log.Error("getPageByGEO - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                return pageByGEOByProvider.pageid_redirectTo;
+            }
+
+            if (pageByGeoGeneral != null)
+            {
+                log.Error("getPageByGEO - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                return pageByGeoGeneral.pageid_redirectTo;
+            }
+
+            return pageID;
+        }
+
+
+
+
+       
 
 
 
@@ -273,6 +337,8 @@ namespace Pixel.Web.Models
 
         }
 
+
+
         public static int getGeoX(int pageID, string countryCode, int providerid)
         {
             List<pixLandingPages_X_Mask> pages_X_Mask = loadLandingPagesMask_X();
@@ -286,13 +352,13 @@ namespace Pixel.Web.Models
 
             if (pageByProviderX != null)
             {
-                log.Error("getGeoX pageByProviderX is not Null - found a record for provider, page &  countryCode ");
+                log.Error("getGeoX - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByProviderX.sendResponseEvery_x;
             }
 
             if (pageByCountryCode != null)
             {
-                log.Error("getGeoX pageByCountryCode is not Null - found a record for page &  countryCode , providerid = -1 ");
+                log.Error("getGeoX - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByCountryCode.sendResponseEvery_x;
             }
 
