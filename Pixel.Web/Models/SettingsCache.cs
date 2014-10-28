@@ -38,7 +38,7 @@ namespace Pixel.Web.Models
                 GN_S2SURL = System.Configuration.ConfigurationManager.AppSettings["GN_S2SURL"].ToString();
                 THANK_YOU_PAGE_URL = System.Configuration.ConfigurationManager.AppSettings["THANK_YOU_PAGE_URL"].ToString();
                 MONITOR_HTTP_REDIRECT_TEST_URL = System.Configuration.ConfigurationManager.AppSettings["MONITOR_HTTP_REDIRECT_TEST_URL"].ToString();
-                CACHE_ITEM_NAMES = new List<string>(new string[] { "providers", "landingPages", "landingPagesByGeo", "landingPagesMask", "landingPages_X_Mask" });
+                CACHE_ITEM_NAMES = new List<string>(new string[] { "providers", "landingPages", "landingPagesByGeo", "landingPagesMask", "landingPages_X_Mask","landingPagesMaskByGEO" });
                 MAC_PAGES = System.Configuration.ConfigurationManager.AppSettings["MAC_PAGE_NAMES"].ToString();
 
             }

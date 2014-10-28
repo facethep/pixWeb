@@ -6,6 +6,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Pixel.Web.Models;
 using Pixel.Web.DB;
+using System.Collections;
+using System.Web;
 
 namespace Pixel.Web.Controllers
 {
@@ -22,14 +24,25 @@ namespace Pixel.Web.Controllers
         // GET: api/cache/5
         public string Get(int id)
         {
-            List<string> cacheItems = SettingsCache.CACHE_ITEM_NAMES;
-            
+            //List<string> cacheItems = SettingsCache.CACHE_ITEM_NAMES;
+            HttpContext oc = HttpContext.Current;
+           // List<string> foundCacheItems = new List<string>();
+
             if (id == 33197000)
             {
-                foreach (string cacheName in cacheItems) // Loop through List with foreach
+                IDictionaryEnumerator en = oc.Cache.GetEnumerator();
+
+                //string strResult;
+                while (en.MoveNext())
                 {
-                    cacheManager.RemoveFromCache(cacheName);
+                    
+                    cacheManager.RemoveFromCache(en.Key.ToString());
                 }
+                
+             //   foreach (string cacheName in cacheItems) // Loop through List with foreach
+             //   {
+             //       cacheManager.RemoveFromCache(cacheName);
+             //   }
 
                
                 return "Cache removed";
@@ -39,7 +52,7 @@ namespace Pixel.Web.Controllers
                 var x = SettingsCache.GetProvider(1003);
                 int y = SettingsCache.getGeoX(1005, "US", 1003);
                 int c = SettingsCache.getRealPageID(5010, 1003);
-                //pixLandingPagesByGEO d = SettingsCache.GetPageByGEO(5011, "US");
+                int d = SettingsCache.getPageByGEO(1000, 1005, "US");
                 pixLandingPages f = SettingsCache.GetPage(5502);
                 return "Cache populated ";
             }

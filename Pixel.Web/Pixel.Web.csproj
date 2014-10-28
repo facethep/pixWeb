@@ -128,7 +128,6 @@
     </Compile>
     <Compile Include="Models\helpers.cs" />
     <Compile Include="Models\PetaPoco.cs" />
-    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\SettingsCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sys\appManage.aspx.cs">
