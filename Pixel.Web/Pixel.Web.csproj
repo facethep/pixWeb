@@ -78,6 +78,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LP\redpoint\contact.html" />
+    <Content Include="LP\redpoint\index.aspx" />
+    <Content Include="LP\redpoint\media\css\style.css" />
+    <Content Include="LP\redpoint\media\images\1.png" />
+    <Content Include="LP\redpoint\media\images\2.png" />
+    <Content Include="LP\redpoint\media\images\3.png" />
+    <Content Include="LP\redpoint\media\images\4.png" />
+    <Content Include="LP\redpoint\media\images\5.png" />
+    <Content Include="LP\redpoint\media\images\6.png" />
+    <Content Include="LP\redpoint\media\images\7.png" />
+    <Content Include="LP\redpoint\media\images\downbut.gif" />
+    <Content Include="LP\redpoint\media\images\downbut2.gif" />
+    <Content Include="LP\redpoint\media\images\logo3.png" />
+    <Content Include="LP\redpoint\media\images\navigators.png" />
+    <Content Include="LP\redpoint\media\images\safe.gif" />
+    <Content Include="LP\redpoint\privacy.html" />
+    <Content Include="LP\redpoint\terms.html" />
+    <Content Include="LP\winpop\index.aspx" />
+    <Content Include="LP\winpop\media\css\modals-b.css" />
+    <Content Include="LP\winpop\media\css\style.css" />
+    <Content Include="LP\winpop\media\images\1.png" />
+    <Content Include="LP\winpop\media\images\accept.png" />
+    <Content Include="LP\winpop\media\images\btn1.png" />
+    <Content Include="LP\winpop\media\images\buttons2.png" />
+    <Content Include="LP\winpop\media\images\buttons3.png" />
+    <Content Include="LP\winpop\media\images\chrome.png" />
+    <Content Include="LP\winpop\media\images\close.png" />
+    <Content Include="LP\winpop\media\images\deny.png" />
+    <Content Include="LP\winpop\media\images\firefox.png" />
+    <Content Include="LP\winpop\media\images\icon.png" />
+    <Content Include="LP\winpop\media\images\ie.png" />
+    <Content Include="LP\winpop\media\images\modals\loading.gif" />
+    <Content Include="LP\winpop\media\images\modals\modal-cr-arrow-b.png" />
+    <Content Include="LP\winpop\media\images\modals\modal-cr-b.jpg" />
+    <Content Include="LP\winpop\media\images\modals\modal-ff-arrow-b.png" />
+    <Content Include="LP\winpop\media\images\modals\modal-ff-b.jpg" />
+    <Content Include="LP\winpop\media\images\modals\modal-ie-8-b.jpg" />
+    <Content Include="LP\winpop\media\images\modals\modal-ie-b.jpg" />
+    <Content Include="LP\winpop\media\images\opera.png" />
+    <Content Include="LP\winpop\media\images\txt1.png" />
+    <Content Include="LP\winpop\media\images\txt2.png" />
+    <Content Include="LP\winpop\media\images\txt3.png" />
+    <Content Include="LP\winpop\media\images\txt4.png" />
+    <Content Include="LP\winpop\media\images\txt5.png" />
+    <Content Include="LP\winpop\media\images\window_en.png" />
+    <Content Include="LP\winpop\media\images\window_en2.png" />
+    <Content Include="LP\winpop\media\js\browserdetector_other.js" />
+    <Content Include="LP\winpop\media\js\browserdetector_v2.js" />
+    <Content Include="LP\winpop\media\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="LP\winpop\media\js\jquery.min.js" />
     <Content Include="sys\appManage.aspx" />
     <Content Include="sys\appSettings.aspx" />
     <Content Include="error.html" />
@@ -91,7 +141,6 @@
     <Content Include="sys\cacheObjets.aspx" />
     <Content Include="tmp.aspx" />
     <Content Include="TY\assets\main.css" />
-    <Content Include="TY\maya.html" />
     <Content Include="TY\thankYou.aspx" />
     <Content Include="TY\thankYou.html" />
     <Content Include="Web.config">
@@ -167,6 +216,13 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <Content Include="LP\redpoint\media\.DS_Store" />
+    <Content Include="LP\redpoint\media\images\.DS_Store" />
+    <Content Include="LP\winpop\media\.DS_Store" />
+    <Content Include="LP\winpop\media\css\.DS_Store" />
+    <Content Include="LP\winpop\media\images\.DS_Store" />
+    <Content Include="LP\winpop\media\images\modals\.DS_Store" />
+    <Content Include="LP\winpop\media\js\.DS_Store" />
     <None Include="Properties\PublishProfiles\pixel.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
