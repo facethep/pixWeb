@@ -88,8 +88,8 @@ namespace Pixel.Web.Controllers
 
                         // check if we need to send response to provider 
                         //if (blnSendPixel() && sendResponseByCountry(intRequestPageId, requestCountryCode))
-
-                        if (blnSendPixel() )
+                        string country_Code = tmpRequest.countryCode;
+                        if (blnSendPixel() && Pixel.Web.Models.SettingsCache.GetPaidGEO(country_Code))
                         {
                             try
                             {

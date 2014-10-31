@@ -99,6 +99,62 @@ namespace Pixel.Web.Models
             return null;
         }
 
+        public static List<pixPaidGEO> loadPaidGEO()
+        {
+            string cacheName = "paidGEO";
+            log.Info("Settings - loadProviders ");
+
+            List<pixPaidGEO> paidGEO;
+            if (!cacheManager.IsIncache(cacheName))
+            {
+                var db = new PetaPoco.Database("myConnectionString");
+
+                string sQuery = "SELECT * FROM paidGEO";
+                try
+                {
+                    var result = db.Fetch<pixPaidGEO>(sQuery);
+                    db.CloseSharedConnection();
+                    paidGEO = result.ToList();
+                    cacheManager.SaveTocache(cacheName, paidGEO);
+                }
+
+                catch (Exception e)
+                {
+                    log.Fatal("!! cannot load Settings of all providers !!", e);
+                }
+            }
+            return cacheManager.GetFromCache<List<pixPaidGEO>>(cacheName);
+
+        }
+
+
+
+        public static Boolean GetPaidGEO(string strGEO)
+        {
+            List<pixPaidGEO> paidGEO = loadPaidGEO();
+
+            pixPaidGEO retVal = null;
+
+            try
+            {
+                retVal =  paidGEO.Find(x => x.GEO == strGEO);
+            }
+            catch (Exception e)
+            {
+                log.Fatal("!! ERROR settings - PaidGEO!!", e);
+            }
+            return !(retVal == null);
+        }
+
+
+
+
+
+
+
+
+
+
 
         private static List<pixLandingPages> loadLandingPages()
         {

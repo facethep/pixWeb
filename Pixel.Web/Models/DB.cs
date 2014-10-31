@@ -120,7 +120,15 @@ namespace Pixel.Web.DB
         public string url { get; set; }
 
     }
+     [PetaPoco.TableName("paidGEO")]
+    [PetaPoco.PrimaryKey("id")]
+    public class pixPaidGEO
+    {
+        public int id { get; set; }
+        public string GEO { get; set; }
+    }
 
+    
 
     [PetaPoco.TableName("ResponseError")]
     [PetaPoco.PrimaryKey("id")]
