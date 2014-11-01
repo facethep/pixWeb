@@ -13,7 +13,7 @@
 <!--[if !IE]><!-->
 <body><!--<![endif]-->
 
-    <a href="index.html">index.html</a>
+  
 
         <div id="content">
             <div class="container">

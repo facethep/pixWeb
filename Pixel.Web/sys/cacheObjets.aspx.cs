@@ -13,8 +13,6 @@ namespace Pixel.Web.sys
     public partial class cacheObjets : System.Web.UI.Page
     {
 
-        private List<string> cacheItems = SettingsCache.CACHE_ITEM_NAMES;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack) {  showCache();}
@@ -30,14 +28,11 @@ namespace Pixel.Web.sys
             List<string> foundCacheItems = new List<string>();
 
             IDictionaryEnumerator en = oc.Cache.GetEnumerator();
-            string strResult;
             while (en.MoveNext())
             {
 
-                strResult = cacheItems.Find(item => item == en.Key.ToString());
-                if (strResult != null)
-                {
-                    foundCacheItems.Add(strResult);
+                if (en.Key.ToString().IndexOf("WebPages") == -1) { 
+                    foundCacheItems.Add(en.Key.ToString());
                     DataGrid aa = new DataGrid();
                     aa.EnableViewState = false;
                     aa.DataSource = en.Value;
@@ -49,11 +44,9 @@ namespace Pixel.Web.sys
 
                     Page.Controls.Add(aa);
 
+
                 }
 
-
-
-                // selct case on object name and append to datagrid                 
             }
 
             BulletedList1.DataSource = foundCacheItems;

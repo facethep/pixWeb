@@ -78,6 +78,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LP\5514\Video Player Recommended.html" />
+    <Content Include="LP\5514\Video Player Recommended_files\ainj.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\browserdetector.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\dlStoragev1.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\ga.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\jquery.min.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\linkv2.js" />
+    <Content Include="LP\5514\Video Player Recommended_files\modals-b.css" />
+    <Content Include="LP\5514\Video Player Recommended_files\style.css" />
     <Content Include="LP\redpoint\contact.html" />
     <Content Include="LP\redpoint\index.aspx" />
     <Content Include="LP\redpoint\media\css\style.css" />
