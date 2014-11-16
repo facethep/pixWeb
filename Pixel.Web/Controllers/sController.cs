@@ -363,7 +363,7 @@ namespace Pixel.Web.Controllers
                 
                 retVal  =  !((responseCounterValue % SendResponseEvery) != 0);
 
-                log.Error("SENDING PIXEL STATUS: " + appKey + ", responseCounterValuec=" + responseCounterValue.ToString() + ", SendResponseEvery = " + SendResponseEvery.ToString() + ", STATUS= " + retVal.ToString()) ;
+                //log.Error("SENDING PIXEL STATUS: " + appKey + ", responseCounterValuec=" + responseCounterValue.ToString() + ", SendResponseEvery = " + SendResponseEvery.ToString() + ", STATUS= " + retVal.ToString()) ;
 
                 log.Info("Need to send pixel to provider: " + appKey + " = " + retVal.ToString());
                 return retVal;

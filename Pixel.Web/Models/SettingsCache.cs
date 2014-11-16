@@ -334,13 +334,13 @@ namespace Pixel.Web.Models
 
             if (pageByGEOByProvider != null)
             {
-                log.Error("getPageByGEO - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                //log.Error("getPageByGEO - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByGEOByProvider.pageid_redirectTo;
             }
 
             if (pageByGeoGeneral != null)
             {
-                log.Error("getPageByGEO - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                //log.Error("getPageByGEO - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByGeoGeneral.pageid_redirectTo;
             }
 

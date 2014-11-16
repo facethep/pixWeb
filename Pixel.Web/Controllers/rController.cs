@@ -88,7 +88,7 @@ namespace Pixel.Web.Controllers
 
                 if (tmpPage != null)
                 {
-                   if ((platform=="MAC") && (tmpPage.pcmac =="PC")){
+                   if ((platform.ToUpper()=="MAC") && (tmpPage.pcmac.ToUpper() =="PC")){
                        sRedirectURL = SettingsCache.GetPage(1005).url;
                    }
                     else{
