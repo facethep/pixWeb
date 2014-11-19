@@ -88,6 +88,81 @@
     <Content Include="LP\5514\Video Player Recommended_files\linkv2.js" />
     <Content Include="LP\5514\Video Player Recommended_files\modals-b.css" />
     <Content Include="LP\5514\Video Player Recommended_files\style.css" />
+    <Content Include="LP\mac\akuogkhfod.aspx" />
+    <Content Include="LP\mac\mac-es.aspx" />
+    <Content Include="LP\mac\mac-fr.aspx" />
+    <Content Include="LP\mac\mac-it.aspx" />
+    <Content Include="LP\mac\vlc-21.jpg" />
+    <Content Include="LP\pc\of1\contact.html" />
+    <Content Include="LP\pc\of1\icon.png" />
+    <Content Include="LP\pc\of1\jnustyvtha.aspx" />
+    <Content Include="LP\pc\of1\loading.gif" />
+    <Content Include="LP\pc\of1\media\css\style.css" />
+    <Content Include="LP\pc\of1\media\images\1.png" />
+    <Content Include="LP\pc\of1\media\images\2.png" />
+    <Content Include="LP\pc\of1\media\images\3.png" />
+    <Content Include="LP\pc\of1\media\images\4.png" />
+    <Content Include="LP\pc\of1\media\images\5.png" />
+    <Content Include="LP\pc\of1\media\images\6.png" />
+    <Content Include="LP\pc\of1\media\images\7.png" />
+    <Content Include="LP\pc\of1\media\images\downbut.gif" />
+    <Content Include="LP\pc\of1\media\images\downbut2.gif" />
+    <Content Include="LP\pc\of1\media\images\logo3.png" />
+    <Content Include="LP\pc\of1\media\images\navigators.png" />
+    <Content Include="LP\pc\of1\media\images\safe.gif" />
+    <Content Include="LP\pc\of1\modal-chrome-arrow-b.png" />
+    <Content Include="LP\pc\of1\modal-chrome-b.jpg" />
+    <Content Include="LP\pc\of1\nhtnrkl.aspx" />
+    <Content Include="LP\pc\of1\nhtnrtbhukt.aspx" />
+    <Content Include="LP\pc\of1\privacy.html" />
+    <Content Include="LP\pc\of1\terms.html" />
+    <Content Include="LP\pc\of1\tyvktcxsr.aspx" />
+    <Content Include="LP\pc\of2\knvnhnuen.aspx" />
+    <Content Include="LP\pc\of2\media\css\modals-b - Copy.css" />
+    <Content Include="LP\pc\of2\media\css\modals-b.css" />
+    <Content Include="LP\pc\of2\media\css\modals-b2.css" />
+    <Content Include="LP\pc\of2\media\css\style - Copy.css" />
+    <Content Include="LP\pc\of2\media\css\style.css" />
+    <Content Include="LP\pc\of2\media\images\1.png" />
+    <Content Include="LP\pc\of2\media\images\accept.png" />
+    <Content Include="LP\pc\of2\media\images\btn1.png" />
+    <Content Include="LP\pc\of2\media\images\buttons2.png" />
+    <Content Include="LP\pc\of2\media\images\buttons3.png" />
+    <Content Include="LP\pc\of2\media\images\chrome.png" />
+    <Content Include="LP\pc\of2\media\images\close.png" />
+    <Content Include="LP\pc\of2\media\images\deny.png" />
+    <Content Include="LP\pc\of2\media\images\firefox.png" />
+    <Content Include="LP\pc\of2\media\images\icon.png" />
+    <Content Include="LP\pc\of2\media\images\ie.png" />
+    <Content Include="LP\pc\of2\media\images\loading.gif" />
+    <Content Include="LP\pc\of2\media\images\modal-chrome-arrow-b.png" />
+    <Content Include="LP\pc\of2\media\images\modal-cr-arrow-b.png" />
+    <Content Include="LP\pc\of2\media\images\modal-cr-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modal-ff-arrow-b.png" />
+    <Content Include="LP\pc\of2\media\images\modal-ff-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modal-ie-8-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modal-ie-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modals\loading.gif" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-cr-arrow-b.png" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-cr-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-ff-arrow-b.png" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-ff-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-ie-8-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\modals\modal-ie-b.jpg" />
+    <Content Include="LP\pc\of2\media\images\opera.png" />
+    <Content Include="LP\pc\of2\media\images\txt1.png" />
+    <Content Include="LP\pc\of2\media\images\txt2.png" />
+    <Content Include="LP\pc\of2\media\images\txt3.png" />
+    <Content Include="LP\pc\of2\media\images\txt4.png" />
+    <Content Include="LP\pc\of2\media\images\txt5.png" />
+    <Content Include="LP\pc\of2\media\images\window_en.png" />
+    <Content Include="LP\pc\of2\media\images\window_en2.png" />
+    <Content Include="LP\pc\of2\media\js\browserdetector_other.js" />
+    <Content Include="LP\pc\of2\media\js\browserdetector_v2.js" />
+    <Content Include="LP\pc\of2\media\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="LP\pc\of2\media\js\jquery.min.js" />
+    <Content Include="LP\pc\of2\tnryhkl.aspx" />
+    <Content Include="LP\pc\of2\tyvktcxsr.aspx" />
     <Content Include="LP\redpoint\contact.html" />
     <Content Include="LP\redpoint\index.aspx" />
     <Content Include="LP\redpoint\media\css\style.css" />
@@ -149,6 +224,7 @@
     <Content Include="pixelTest.html" />
     <Content Include="Revisions.txt" />
     <Content Include="sys\cacheObjets.aspx" />
+    <Content Include="sys\pageUrlHandler.aspx" />
     <Content Include="tmp.aspx" />
     <Content Include="TY\assets\main.css" />
     <Content Include="TY\thankYou.aspx" />
@@ -203,6 +279,13 @@
     <Compile Include="sys\cacheObjets.aspx.designer.cs">
       <DependentUpon>cacheObjets.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sys\pageUrlHandler.aspx.cs">
+      <DependentUpon>pageUrlHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sys\pageUrlHandler.aspx.designer.cs">
+      <DependentUpon>pageUrlHandler.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tmp.aspx.cs">
       <DependentUpon>tmp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -233,6 +316,11 @@
     <Content Include="LP\winpop\media\images\.DS_Store" />
     <Content Include="LP\winpop\media\images\modals\.DS_Store" />
     <Content Include="LP\winpop\media\js\.DS_Store" />
+    <Content Include="LP\pc\of1\media\.DS_Store" />
+    <Content Include="LP\pc\of1\media\images\.DS_Store" />
+    <Content Include="LP\pc\of2\media\images\.DS_Store" />
+    <Content Include="LP\pc\of2\media\images\modals\.DS_Store" />
+    <Content Include="LP\pc\of2\media\js\.DS_Store" />
     <None Include="Properties\PublishProfiles\pixel.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

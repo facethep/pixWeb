@@ -159,7 +159,9 @@ namespace Pixel.Web.Controllers
             }//if (intProviderPageId != null)
             else
             {
-                log.Fatal("No Providerid or Pageid in Query string: " + fullurl + " , redirecting to error page: ");
+                ip_address = Pixel.Web.Models.pixHelpers.GetIPAddress();
+
+                log.Fatal("No Providerid or Pageid in Query string: " + fullurl + " , redirecting to error page. IP =  " + ip_address );
                 sRedirectURL = ERROR_PAGE_URL;
             }
 

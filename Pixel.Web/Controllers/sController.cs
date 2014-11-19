@@ -34,7 +34,7 @@ namespace Pixel.Web.Controllers
         {
             string sUID, fullUrl, pixelURL,  retValue, requestCountryCode;
             string ip_address, res_countryCode;
-            ip_address = res_countryCode = requestCountryCode = string.Empty;
+            ip_address = res_countryCode = requestCountryCode =  string.Empty;
             Guid tmpGuid;
             Int32 intProviderId;
 
@@ -160,7 +160,10 @@ namespace Pixel.Web.Controllers
 
             else
             {
-                log.Fatal("The uid we got from DLM is empty or cannot be converted to guid : " + fullUrl);
+                ip_address = Pixel.Web.Models.pixHelpers.GetIPAddress();
+                res_countryCode = Pixel.Web.Models.pixHelpers.GetLocationFromIPDB(ip_address);
+
+                log.Fatal("The uid we got from DLM is empty or cannot be converted to guid : " + fullUrl + " IP: " + ip_address + ", countryCode: " + res_countryCode);
                 insertErrorResponse(fullUrl);
                 retValue = "ERROR 5";
 

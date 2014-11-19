@@ -329,7 +329,7 @@ namespace Pixel.Web.Models
             catch
             {
 
-                log.Error("getProviderPageID: cannot get providerid or pageid from querystring: " + uri);
+                //log.Error("getProviderPageID: cannot get providerid or pageid from querystring: " + uri);
                 retVal = null;
             }
 

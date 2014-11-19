@@ -397,13 +397,13 @@ namespace Pixel.Web.Models
 
             if (pageByProviderX != null)
             {
-                log.Error("getGeoX - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                //log.Error("getGeoX - found a record for provider = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByProviderX.sendResponseEvery_x;
             }
 
             if (pageByCountryCode != null)
             {
-                log.Error("getGeoX - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
+                //log.Error("getGeoX - did NOT find record for provider (-1) = " + providerid.ToString() + ", page= " + pageID.ToString() + ", countryCode= " + countryCode);
                 return pageByCountryCode.sendResponseEvery_x;
             }
 
