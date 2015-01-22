@@ -313,7 +313,7 @@ namespace Pixel.Web.Controllers
             string appKey = string.Empty; 
             int responseCounterValue, SendResponseEvery;
 
-            int rFactor = 1;
+            //int rFactor = 1;
             string _countryCode = tmpRequest.countryCode;
             int _pageid = tmpRequest.pageid;
             int _providerid = tmpRequest.providerid;

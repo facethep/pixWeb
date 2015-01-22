@@ -23,7 +23,10 @@ namespace Pixel.Web.sys
             {
                 intPageId = Convert.ToInt16(pageid);
                 oPage = SettingsCache.GetPage(intPageId);
-                Response.Write(oPage.url);
+                if (oPage != null)
+                {
+                    Response.Write(oPage.url);
+                }
             }
             else
             {
