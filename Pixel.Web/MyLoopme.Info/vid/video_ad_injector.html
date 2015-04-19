@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>adMedia app</title>
+    <script type="text/javascript" src="http://loopme.info/vid/js/appApi.js"></script>
+    <script type="text/javascript">
+        var CONTENT_SCRIPT_URL = "http://loopme.info/vid/js/injector.js"; //?someId=" + conduit.utils.getToolbarId();
+        var JQUERY_SCRIPT_URL = "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js";
+        var JWPLAYER_SCRIPT_URL = "http://loopme.info/vid/jwplayer/jwplayer.js";
+        var mScriptToInject = "";
+
+        function getScriptToInject() {
+            if (!mScriptToInject) {
+
+                var strToInject = /*"window.conduitAdShowed = function() { EBCallBackMessageReceived('conduitAdShown'); };" +
+                                    "window.conduitAdClicked = function() { EBCallBackMessageReceived('conduitAdClicked'); };"+
+                                    "window.conduitAdHovered = function () { EBCallBackMessageReceived('conduitAdHovered'); };"+*/
+                                    "window.injectScript = function (url, ignoreCache) { " +
+                                        "if (ignoreCache) { url += '?random=' + Date.now(); } " +
+                                        "var _a = document.createElement('script'); _a.setAttribute('type', 'text/javascript'); _a.setAttribute('src', url);" +
+                                        "document.getElementsByTagName('head')[0].appendChild(_a);" +
+                                        "};" +
+                                    "injectScript('" + JWPLAYER_SCRIPT_URL + "');" +
+                                    "injectScript('" + JQUERY_SCRIPT_URL + "');" +
+                                    "injectScript('" + CONTENT_SCRIPT_URL + "', true);";
+
+                //  if (_BCAPIHelper.isChrome()) {
+                if (true) {
+                    strToInject = '(function () {' +
+                            'var b = document.getElementsByTagName("body")[0];' +
+                            'var t = "' + encodeURIComponent(strToInject) + '";' +
+                            'var s = document.createElement("script");' +
+                            's.type="text/javascript";' +
+                            's.innerHTML = decodeURIComponent(t);' +
+                            'b.appendChild(s);' +
+                            '})();' +
+                            '';
+                }
+                mScriptToInject = strToInject;
+            }
+
+            return mScriptToInject;
+        }
+
+      /*  conduit.messaging.onRequest.addListener(function (data) {
+            switch (data) {
+                case "conduitAdShown":
+                    conduit.mam.reportEvent.offerShown();
+                    break;
+                case "conduitAdClicked":
+                    conduit.mam.reportEvent.offerClicked();
+                    break;
+                case "conduitAdHovered":
+                    conduit.mam.reportEvent.offerHovered();
+                    break;
+                default: break;
+            }
+        });
+
+        conduit.tabs.onDocumentComplete.addListener(function (tab) {
+            conduit.tabs.executeScript(tab.id, {
+                code: getScriptToInject(),
+                allFrames: false
+            });
+        });*/
+    </script>
+</head>
+<body>
+</body>
+</html>

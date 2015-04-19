@@ -1,0 +1,261 @@
+/*********** MODAL ************/
+
+.modal-container, .modal-bg, .modal-content-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	color: #333;
+}
+
+.modal-container .modal-bg {
+	background: black;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+
+
+.modal-content-container {
+	z-index: 9999;
+}
+
+
+/**** chrome *****/
+.modal-chrome {
+	position: absolute;
+	bottom: 0px; 
+	left: 100px;
+	opacity: 1;
+	width: 474px;
+	height: 240px;
+	z-index: 998;
+	background: url("../images/modal-chrome-b.jpg") 0 0 no-repeat;
+}
+#loadingchrome {
+	background: url("../images/loading.gif") no-repeat top left transparent;
+	padding-left: 36px;
+	color: #666;
+	position: absolute;
+	top: 180px;
+	left: 101px;
+	height: 56px;
+	font-size: 14px;
+	padding-top: 5px;
+	width: 36px;
+}
+.modal-chrome-arrow {
+	position: absolute;
+	bottom:0;
+	width: 135px;
+	height: 249px;
+	z-index: 999;
+	background: url("../images/modal-chrome-arrow-b.png") 0 0 no-repeat;
+}
+.modal-chrome .col1 {
+	float:left;
+	width:49%;
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+.modal-chrome .col2 {
+	float:left;
+	width:48%;
+	margin: 10px 0 0 12px;
+	text-align: center;
+}
+.modal-chrome h3 {
+	color: #333;
+	font-size: 20px;
+	margin: 0;
+}
+.modal-chrome .col1 h4 {
+	font-size: 36px;
+	color: #fff;
+	margin: 38px 0 0;
+	font-weight: 400;
+}
+.modal-chrome .col1 h5 {
+	font-size: 12px;
+	text-align: left;
+	margin: 27px 0 0 58px;
+	font-weight: 400;
+}
+.modal-chrome .col2 h4 {
+	color: #fff;
+	font-size: 13px;
+	margin: 14px 0 0;
+	font-weight: 400;
+}
+.modal-chrome .col2 h4 span {
+	color:#40A0FF;
+}
+/***** firefox *****/
+.modal-ff {
+	position: absolute;
+	z-index: 998;
+	right: 145px;
+	opacity: 1;
+	width: 494px;
+	height: 299px;
+	background: url("../images/modal-ff-b.jpg") 0 0 no-repeat;
+	margin:10px 0 0;
+}
+.modal-ff-arrow {
+	position: absolute;
+	top:10px;
+	right:5px;
+	width: 135px;
+	height: 249px;
+	z-index: 999;
+	background: url("../images/modal-ff-arrow-b.png") 0 0 no-repeat;
+}
+.modal-ff .col1 {
+	float:left;
+	width:49%;
+	height: 150px;
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+.modal-ff .col2 {
+	float:left;
+	width:47%;
+	height: 150px;
+	margin: 10px 0 0 10px;
+	text-align: center;
+}
+.modal-ff .col3 {
+	float:left;
+	width:100%;
+	margin: 10px 0 0 10px;
+	text-align: center;
+}
+.modal-ff h3 {
+	color: #333;
+	font-size: 18px;
+	margin: 0;
+}
+.modal-ff .col1 h4 {
+	color: #fff;
+	font-size: 14px;
+	margin: 15px 0 0;
+	font-weight: 400;
+}
+.modal-ff .col2 h4 {
+	color: #fff;
+	font-size: 13px;
+	margin: 11px 0 0;
+	font-weight: 400;
+}
+.modal-ff .col3 h4 {
+	color: #fff;
+	font-size: 15px;
+	margin: 45px 0 0;
+	font-weight: 400;
+	text-align: left;
+}
+/**** explorer *****/
+.modal-ie {
+	position: absolute;
+	z-index: 998;
+	left:50%;
+	bottom: 120px;
+	opacity: 1;
+	width: 492px;
+	height: 160px;
+	margin-left: -246px;
+	padding:0 20px;
+	background: url("../images/modal-ie-b.jpg") 0 0 no-repeat
+}
+.modal-ie-arrow {
+	position: absolute;
+	bottom:60px;
+	left:50%;
+	width: 135px;
+	height: 249px;
+	z-index: 999;
+	margin-left: -330px;
+	background: url("../images/modal-chrome-arrow-b.png") 0 0 no-repeat;
+}
+.modal-ie-2-arrow {
+	position: absolute;
+	bottom:60px;
+	left:50%;
+	width: 135px;
+	height: 249px;
+	z-index: 999;
+	margin-left: 200px;
+	background: url("../images/modal-chrome-arrow-b.png") 0 0 no-repeat;	
+}
+.modal-ie h4 {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	margin: 30px 0 0;
+	width:90%;	
+	color: #fff;
+}
+.modal-ie h4 span {
+	color:#40A0FF;
+}
+
+/**** explorer ie 8 *****/
+.modal-ie-8 {
+	position: absolute;
+	z-index: 998;
+	left:50%;
+	bottom: 0px;
+	opacity: 1;
+	width: 631px;
+	height: 330px;
+	margin-left: -315px;
+	padding:0;
+	background: url("../images/modal-ie-8-b.jpg") 0 0 no-repeat
+}
+.modal-ie-8 .col1 {
+	float:left;
+	width:100%;
+	height: 138px;
+	margin: 0 0 0 0;
+	text-align: center;
+
+}
+.modal-ie-8 .col2 {
+	float:left;
+	width:31%;
+	height: 190px;
+	margin: 0 7px 0 7px;
+	text-align: center;
+
+}
+.modal-ie-8 h3 {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 3px 0 0;
+}
+.modal-ie-8 h4 {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	margin: 10px 0 0;
+	color: #fff;
+}
+.modal-ie-8 h4 span {
+		color: #fff;
+
+}
+
+/*****/
+.modal-content-container p {
+	width:86%;
+	line-height: 16px;
+	margin: 2px 0 0;
+
+}
+.modal-content-container .powered {
+	color: #0097d0; 
+	font-weight: bold; 
+}

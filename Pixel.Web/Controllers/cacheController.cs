@@ -24,9 +24,7 @@ namespace Pixel.Web.Controllers
         // GET: api/cache/5
         public string Get(int id)
         {
-            //List<string> cacheItems = SettingsCache.CACHE_ITEM_NAMES;
             HttpContext oc = HttpContext.Current;
-           // List<string> foundCacheItems = new List<string>();
 
             if (id == 33197000)
             {
@@ -39,11 +37,6 @@ namespace Pixel.Web.Controllers
                     cacheManager.RemoveFromCache(en.Key.ToString());
                 }
                 
-             //   foreach (string cacheName in cacheItems) // Loop through List with foreach
-             //   {
-             //       cacheManager.RemoveFromCache(cacheName);
-             //   }
-
                
                 return "Cache removed";
             }

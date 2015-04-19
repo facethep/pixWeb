@@ -27,7 +27,7 @@
                   window.onbeforeunload = null;
               }
           }
-          alert("WARNING! Current version might be outdated!  Your computer is vulnerable to malware.  Install the latest version now.");
+          //alert("WARNING! Current version might be outdated!  Your computer is vulnerable to malware.  Install the latest version now.");
       };
 
       /*window.onbeforeunload = function()
